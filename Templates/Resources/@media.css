@@ -1,0 +1,110 @@
+/**
+ * Instance by DrewIt
+ */
+
+/* Responsive spacing + size overrides
+   - Overrides the --space-* and --size-* variables at breakpoints so all utilities
+     in msize.css that reference these variables scale automatically.
+   - Breakpoints chosen: sm (>=640px), md (>=768px), lg (>=1024px), xl (>=1280px)
+   - Also provide a simple .container helper that uses the responsive variables.
+*/
+
+/* Base container (uses base variables from msize.css) */
+.container{max-width:var(--max-content-width);margin-left:auto;margin-right:auto;padding-left:var(--space-md);padding-right:var(--space-md);box-sizing:border-box}
+
+/* Small screens and up */
+@media (min-width:640px){
+  :root{
+    --space-xxs:.2875rem; /* ~.25 * 1.15 */
+    --space-xs:.575rem;   /* ~.5 * 1.15 */
+    --space-sm:.8625rem;  /* ~.75 * 1.15 */
+    --space-md:1.15rem;   /* ~1 * 1.15 */
+    --space-lg:1.725rem;  /* ~1.5 * 1.15 */
+    --space-xl:2.3rem;    /* ~2 * 1.15 */
+
+    --size-xxs:0.515rem;  /* ~.5 * 1.03 */
+    --size-xs:0.7725rem;  /* ~.75 * 1.03 */
+    --size-sm:0.90125rem; /* ~.875 * 1.03 */
+    --size-md:1.03rem;    /* ~1 * 1.03 */
+    --size-lg:1.2875rem;  /* ~1.25 * 1.03 */
+    --size-xl:1.545rem;   /* ~1.5 * 1.03 */
+    --size-xxl:2.06rem;   /* ~2 * 1.03 */
+    --size-3xl:3.09rem;   /* ~3 * 1.03 */
+
+    --max-content-width:76rem;
+  }
+}
+
+/* Medium screens and up */
+@media (min-width:768px){
+  :root{
+    --space-xxs:.3375rem; /* ~.25 * 1.35 */
+    --space-xs:.675rem;   /* ~.5 * 1.35 */
+    --space-sm:1.0125rem; /* ~.75 * 1.35 */
+    --space-md:1.35rem;   /* ~1 * 1.35 */
+    --space-lg:2.025rem;  /* ~1.5 * 1.35 */
+    --space-xl:2.7rem;    /* ~2 * 1.35 */
+
+    --size-xxs:0.53rem;   /* ~.5 * 1.06 */
+    --size-xs:0.795rem;   /* ~.75 * 1.06 */
+    --size-sm:0.9275rem;  /* ~.875 * 1.06 */
+    --size-md:1.06rem;    /* ~1 * 1.06 */
+    --size-lg:1.325rem;   /* ~1.25 * 1.06 */
+    --size-xl:1.59rem;    /* ~1.5 * 1.06 */
+    --size-xxl:2.12rem;   /* ~2 * 1.06 */
+    --size-3xl:3.18rem;   /* ~3 * 1.06 */
+
+    --max-content-width:80rem;
+  }
+}
+
+/* Large screens and up */
+@media (min-width:1024px){
+  :root{
+    --space-xxs:.4rem;   /* ~.25 * 1.6 */
+    --space-xs:.8rem;    /* ~.5 * 1.6 */
+    --space-sm:1.2rem;   /* ~.75 * 1.6 */
+    --space-md:1.6rem;   /* ~1 * 1.6 */
+    --space-lg:2.4rem;   /* ~1.5 * 1.6 */
+    --space-xl:3.2rem;   /* ~2 * 1.6 */
+
+    --size-xxs:0.545rem; /* ~.5 * 1.09 */
+    --size-xs:0.8175rem; /* ~.75 * 1.09 */
+    --size-sm:0.95375rem;/* ~.875 * 1.09 */
+    --size-md:1.09rem;   /* ~1 * 1.09 */
+    --size-lg:1.3625rem; /* ~1.25 * 1.09 */
+    --size-xl:1.635rem;  /* ~1.5 * 1.09 */
+    --size-xxl:2.18rem;  /* ~2 * 1.09 */
+    --size-3xl:3.27rem;  /* ~3 * 1.09 */
+
+    --max-content-width:90rem;
+  }
+}
+
+/* Extra large screens and up */
+@media (min-width:1280px){
+  :root{
+    --space-xxs:.475rem; /* ~.25 * 1.9 */
+    --space-xs:.95rem;   /* ~.5 * 1.9 */
+    --space-sm:1.425rem; /* ~.75 * 1.9 */
+    --space-md:1.9rem;   /* ~1 * 1.9 */
+    --space-lg:2.85rem;  /* ~1.5 * 1.9 */
+    --space-xl:3.8rem;   /* ~2 * 1.9 */
+
+    --size-xxs:0.56rem;  /* ~.5 * 1.12 */
+    --size-xs:0.84rem;   /* ~.75 * 1.12 */
+    --size-sm:0.98rem;   /* ~.875 * 1.12 */
+    --size-md:1.12rem;   /* ~1 * 1.12 */
+    --size-lg:1.4rem;    /* ~1.25 * 1.12 */
+    --size-xl:1.68rem;   /* ~1.5 * 1.12 */
+    --size-xxl:2.24rem;  /* ~2 * 1.12 */
+    --size-3xl:3.36rem;  /* ~3 * 1.12 */
+
+    --max-content-width:100rem;
+  }
+}
+
+/* Utility: optional class to reduce horizontal padding on very small screens */
+@media (max-width:360px){
+  .container{padding-left:var(--space-xs);padding-right:var(--space-xs)}
+}
