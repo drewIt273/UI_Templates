@@ -1,0 +1,183 @@
+/**
+ * Instance by DrewIt
+ */
+:root{
+    --size-xxs: .5rem;
+    --size-xs: .75rem;
+    --size-sm: .875rem;
+    --size-md: 1rem;
+    --size-lg: 1.25rem;
+    --size-xl: 1.5rem;
+    --size-xxl: 2rem;
+    --size-3xl: 3rem;
+    --space-xxs: .25rem;
+    --space-xs: .5rem;
+    --space-sm: .75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --radius-sm: .125rem;
+    --radius-md: .25rem;
+    --radius-lg: .5rem;
+    --radius-round: 9999px;
+    --border-width: 1px;
+    --max-content-width: 72rem;
+}
+
+/* Font-size utilities */
+.size-xxs{font-size:var(--size-xxs);line-height:1}
+.size-xs{font-size:var(--size-xs);line-height:1.1}
+.size-sm{font-size:var(--size-sm);line-height:1.2}
+.size-md{font-size:var(--size-md);line-height:1.3}
+.size-lg{font-size:var(--size-lg);line-height:1.25}
+.size-xl{font-size:var(--size-xl);line-height:1.2}
+.size-xxl{font-size:var(--size-xxl);line-height:1.15}
+.size-3xl{font-size:var(--size-3xl);line-height:1}
+
+/* Width / Height utilities */
+.w-xxs{width:calc(var(--size-xxs)*6)}
+.w-xs{width:calc(var(--size-xs)*8)}
+.w-sm{width:calc(var(--size-sm)*10)}
+.w-md{width:calc(var(--size-md)*12)}
+.w-lg{width:calc(var(--size-lg)*14)}
+.w-xl{width:calc(var(--size-xl)*16)}
+.w-full{width:100%}
+
+.h-xxs{height:calc(var(--size-xxs)*6)}
+.h-xs{height:calc(var(--size-xs)*8)}
+.h-sm{height:calc(var(--size-sm)*10)}
+.h-md{height:calc(var(--size-md)*12)}
+.h-lg{height:calc(var(--size-lg)*14)}
+.h-xl{height:calc(var(--size-xl)*16)}
+.h-auto{height:auto}
+
+/* Square helpers (width == height) */
+.square-xxs{width:calc(var(--size-xxs)*8);height:calc(var(--size-xxs)*8)}
+.square-xs{width:calc(var(--size-xs)*8);height:calc(var(--size-xs)*8)}
+.square-sm{width:calc(var(--size-sm)*10);height:calc(var(--size-sm)*10)}
+.square-md{width:calc(var(--size-md)*12);height:calc(var(--size-md)*12)}
+.square-lg{width:calc(var(--size-lg)*14);height:calc(var(--size-lg)*14)}
+
+/* Icon sizing (for SVG/img icons) */
+.icon-xs{width:.75rem;height:.75rem}
+.icon-sm{width:1rem;height:1rem}
+.icon-md{width:1.5rem;height:1.5rem}
+.icon-lg{width:2rem;height:2rem}
+.icon-xl{width:2.5rem;height:2.5rem}
+
+/* Useful layout helpers */
+/* Layout helpers (extended) */
+.fit{box-sizing:border-box;display:inline-block}
+.block{display:block}
+.inline{display:inline}
+.center{display:flex;align-items:center;justify-content:center}
+
+/* Display helpers */
+.d-none{display:none}
+.d-block{display:block}
+.d-inline{display:inline}
+.d-inline-block{display:inline-block}
+.d-flex{display:flex}
+.d-inline-flex{display:inline-flex}
+.d-grid{display:grid}
+
+/* Flex direction / wrapping */
+.flex-row{flex-direction:row}
+.flex-row-reverse{flex-direction:row-reverse}
+.flex-column{flex-direction:column}
+.flex-column-reverse{flex-direction:column-reverse}
+.flex-wrap{flex-wrap:wrap}
+.flex-nowrap{flex-wrap:nowrap}
+.flex-wrap-reverse{flex-wrap:wrap-reverse}
+
+/* Alignment (flex/grid) */
+.items-start{align-items:flex-start}
+.items-center{align-items:center}
+.items-end{align-items:flex-end}
+.items-baseline{align-items:baseline}
+.items-stretch{align-items:stretch}
+
+.justify-start{justify-content:flex-start}
+.justify-center{justify-content:center}
+.justify-end{justify-content:flex-end}
+.justify-between{justify-content:space-between}
+.justify-around{justify-content:space-around}
+.justify-evenly{justify-content:space-evenly}
+
+/* Self alignment */
+.self-start{align-self:flex-start}
+.self-center{align-self:center}
+.self-end{align-self:flex-end}
+.self-stretch{align-self:stretch}
+
+/* Gap utilities (works for grid and flex in modern browsers) */
+.gap-xxs{gap:var(--space-xxs)}
+.gap-xs{gap:var(--space-xs)}
+.gap-sm{gap:var(--space-sm)}
+.gap-md{gap:var(--space-md)}
+.gap-lg{gap:var(--space-lg)}
+.gap-xl{gap:var(--space-xl)}
+
+/* Grid helpers */
+.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}
+.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
+.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}
+.grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}
+
+/* Positioning */
+.pos-static{position:static}
+.pos-relative{position:relative}
+.pos-absolute{position:absolute}
+.pos-fixed{position:fixed}
+.pos-sticky{position:sticky}
+
+/* Insets */
+.inset-0{top:0;right:0;bottom:0;left:0}
+.inset-x-0{left:0;right:0}
+.inset-y-0{top:0;bottom:0}
+.top-0{top:0}
+.right-0{right:0}
+.bottom-0{bottom:0}
+.left-0{left:0}
+
+/* Sizing helpers */
+.min-w-0{min-width:0}
+.max-w-full{max-width:100%}
+.max-w-content{max-width:var(--max-content-width)}
+.w-auto{width:auto}
+.h-auto{height:auto}
+
+/* Text alignment */
+.text-left{text-align:left}
+.text-center{text-align:center}
+.text-right{text-align:right}
+.text-justify{text-align:justify}
+
+/* Overflow / truncation */
+.overflow-auto{overflow:auto}
+.overflow-hidden{overflow:hidden}
+.overflow-scroll{overflow:scroll}
+.truncate{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Accessibility / visibility */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* Utility helpers */
+.cursor-pointer{cursor:pointer}
+.flex-1{flex:1 1 0%}
+.flex-none{flex:0 0 auto}
+.align-top{vertical-align:top}
+.align-middle{vertical-align:middle}
+.align-bottom{vertical-align:bottom}
+
+/* Responsive text size */
+.size-responsive{font-size:clamp(.875rem, .6rem + 1vw, 1.25rem)}
+
+/* Scale utilities */
+.scale-75{transform:scale(.75);transform-origin:0 0}
+.scale-90{transform:scale(.9);transform-origin:0 0}
+.scale-100{transform:scale(1);transform-origin:0 0}
+.scale-125{transform:scale(1.25);transform-origin:0 0}
+
+/* Small accessibility tweak: ensure text scales with user settings */
+html{font-size:100%}
