@@ -1,6 +1,6 @@
 # Anitube UI Template
 
-Anitube is a simple UI template inspired by the idea of a social media platform for anime lovers—think “YouTube, but for anime.” This project is meant to show off a basic concept for a site where anime fans can discover videos, view channels, and (in the future) connect with each other.
+Anitube is a simple UI template inspired by the idea of a social media platform for anime lovers—think “YouTube, but for anime.” This template is meant to show off a basic concept for a site where anime fans can discover videos, view channels, and (in the future) connect with each other.
 
 > **Note:**  
 > This is only a design/prototype. It’s not a functional social media app, but a creative starting point!
@@ -36,19 +36,7 @@ git clone https://github.com/drewIt273/Templates/tree/main/Templates/anitube-hom
 
 A screenshot/video demo will be added soon!
 
-## Customization
-
-Currently, this template is not designed for customization. It’s a static mockup to visualize the idea.
-
-## Contributing
-
-This project is just a personal experiment, so I’m not accepting contributions at this time.
-
-## License
-
-No license.
-
 ## Contact
 
 Questions or feedback?  
-Reach out by email: [instantdrewIt@gmail.com](mailto:instantdrewIt@gmail.com)
+Reach out by email: [Gmail](mailto:instantdrewit@gmail.com)
