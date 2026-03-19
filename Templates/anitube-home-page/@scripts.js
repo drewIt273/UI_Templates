@@ -14,11 +14,6 @@ const profile_view = web_app.getElementById('anituber-profile');
 const profile_popup = web_app.querySelector('profile-popup');
 const profile_menu = web_app.getElementById('profile-menu');
 
-class div extends HTMLDivElement {
-    constructor() {
-        return web_app.createElement('div')
-    }
-} 
 class span extends HTMLSpanElement {
     constructor() {
         return web_app.createElement('span')
