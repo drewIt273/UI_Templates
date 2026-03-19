@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'open';
-    src: url('../Resources/fonts/Openfont.ttf');
+    src: url('../bin/fonts/Openfont.ttf');
 }
 :root {
     --brand-color: #b502ff;
