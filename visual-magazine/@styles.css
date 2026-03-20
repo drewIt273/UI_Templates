@@ -2,14 +2,26 @@
  * Instance by DrewIt
  */
 
-@import url('../bin/fonts/Openfont.ttf');
-
+@font-face {
+    font-family: 'open';
+    src: url('../bin/fonts/Openfont.ttf');
+}
 * {
-    border: 0;
     margin: 0;
     padding: 0;
+    border: 0 solid;
+    font-weight: 300;
+    text-decoration: none;
+    outline: 0 none transparent;
+}
+*, *::before, *::after, *::backdrop {
+    border-color: transparent;
 }
 html {
     height: 100dvh;
     width: 100dvw;
+}
+html body {
+    height: 100%;
+    background-color: #191919;
 }
