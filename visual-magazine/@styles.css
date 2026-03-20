@@ -51,6 +51,10 @@ div#background-overlay {
     padding: 15px 0;
     background-color: #222222b0;
 }
+div#main {
+    display: flex;
+    gap: 30px;
+}
 va-bg-img {
     height: 100%;
     display: block;
@@ -66,10 +70,20 @@ va-body {
     padding: 0 20px;
     display: block;
 }
+va-mag-pic {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ffffff14;
+    width: 430px;
+    height: calc(100dvh - 120px);
+}
 @media (min-width: 1100px) {
     #background-overlay {
         height: calc(100dvh - 50px);
         padding: 25px 0;
+    }
+    #main {
+        padding: 40px 0;
     }
     va-body {
         padding: 0 40px;
