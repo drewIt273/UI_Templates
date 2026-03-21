@@ -95,16 +95,14 @@ va-mag-pic #mag-posts .mag-post {
     height: 100%;
     position: absolute;
 }
-va-mag-pic #mag-posts .mag-post[transit] {
-    position: relative;
+va-mag-pic #mag-posts .mag-post[next] {
+    transform: translateX(100%);
 }
-va-mag-pic #mag-posts .mag-post[transit][next] {
-    transform: translateX(430px);
-}
-va-mag-pic #mag-posts .mag-post[transit][prev] {
-    transform: translateX(-430px);
+va-mag-pic #mag-posts .mag-post[prev] {
+    transform: translateX(-100%);
 }
 va-mag-pic #mag-posts .mag-post[now] {
+    transform: translateX(0);
     z-index: 3;
 }
 va-mag-pic #mag-description {
