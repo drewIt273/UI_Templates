@@ -31,3 +31,12 @@ function transit(target) {
         target.setStates('now');
     }
 }
+
+let currentIndex = 0;
+
+function getIndexes() {
+    const prev = (currentIndex - 1 + articles.length) % articles.length;
+    const next = (currentIndex + 1) % articles.length;
+  
+    return { prev, currentIndex, next };
+}
