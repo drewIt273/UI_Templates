@@ -2,6 +2,8 @@
  * Instance by DrewIt
  */
 
+import {articles} from "./magposts.js";
+
 HTMLElement.prototype.toggleState = function (a, b) {
     if (this.getAttribute('data-state') === a) this.setAttribute('data-state', b)
     else this.setAttribute('data-state', a)
