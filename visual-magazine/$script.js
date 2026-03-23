@@ -57,3 +57,13 @@ function updatePost(el, data) {
     desc.querySelector('span').textContent = data.d;
     el.style.backgroundColor = `url(${data.src})`
 }
+
+function goNext() {
+    currentIndex = (currentIndex + 1) % articles.length;
+    render();
+}
+  
+function goPrev() {
+    currentIndex = (currentIndex - 1 + articles.length) % articles.length;
+    render();
+}
