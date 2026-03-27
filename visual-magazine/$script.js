@@ -51,9 +51,10 @@ function render() {
 
 function updatePost(el, data) {
     const parent = document.querySelector('#con1 va-mag-pic'), desc = parent.querySelector('#mag-description');
-    desc.querySelector('h2').textContent = data.t;
-    desc.querySelector('span').textContent = data.d;
-    el.style.backgroundColor = `url(${data.src})`
+    el.querySelector('.mag-description h2').textContent = data.t;
+    el.querySelector('.mag-description span').textContent = data.d;
+    el.style.backgroundImage = `url("./resources/${data.img}")`;
+    if (el === posts.find(p => p.hasAttribute('now'))) document.querySelector('va-bg-img img#bg-img').src = `./resources/${data.img}`;
 }
 
 function goNext() {
