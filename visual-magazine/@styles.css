@@ -109,7 +109,7 @@ va-mag-pic #mag-posts .mag-post[now] {
     transform: translateX(0);
     z-index: 3;
 }
-va-mag-pic #mag-description {
+va-mag-pic .mag-description {
     position: absolute;
     bottom: 0;
     height: 35%;
@@ -120,7 +120,7 @@ va-mag-pic #mag-description {
     cursor: default;
     z-index: 4;
 }
-va-mag-pic #mag-description > * {
+va-mag-pic .mag-description > * {
     padding: 0 20px;
 }
 div.btab {
