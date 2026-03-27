@@ -66,3 +66,8 @@ function goPrev() {
     currentIndex = (currentIndex - 1 + articles.length) % articles.length;
     render();
 }
+
+!function() {
+    currentIndex = Math.floor(Math.random() * articles.length)
+    render()
+}();
