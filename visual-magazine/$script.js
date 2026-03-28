@@ -66,11 +66,13 @@ function updatePost(el, data) {
 
 function goNext() {
     currentIndex = (currentIndex + 1) % articles.length;
+    transit(postat('next'));
     render();
 }
-  
+
 function goPrev() {
     currentIndex = (currentIndex - 1 + articles.length) % articles.length;
+    transit(postat('prev'));
     render();
 }
 
