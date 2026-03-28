@@ -14,6 +14,10 @@ Element.prototype.setStates = function (...states) {
 
 const posts = Array.from(document.getElementById('mag-posts').children);
 
+function postat(state) {
+    return posts.find(p => p.hasAttribute(state))
+}
+
 /**
  * @param {Element} target 
  */
