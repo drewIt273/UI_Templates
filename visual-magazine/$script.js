@@ -80,3 +80,7 @@ function goPrev() {
     currentIndex = Math.floor(Math.random() * articles.length)
     render()
 }();
+
+document.querySelector('div#main').addEventListener('keydown', /**@param {KeyboardEvent} e */ e => {
+    e.key === 'ArrowLeft' ? goPrev() : e.key === 'ArrowRight' ? goNext() : void 0;
+});
