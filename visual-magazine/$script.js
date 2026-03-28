@@ -25,10 +25,13 @@ function transit(target) {
     const current = posts.find(p => p.hasAttribute('now'));
     if (!target || target === current) return;
 
-    if (target.hasAttribute('next')) {
-        current.setStates('prev')
-        target.setStates('now')
-    } else {
+    if (target === postat('next')) {
+        postat('prev').setStates('next');
+        current.setStates('prev');
+        target.setStates('now');
+    }
+    else if (target === postat('prev')) {
+        postat('next').setStates('prev');
         current.setStates('next');
         target.setStates('now');
     }
