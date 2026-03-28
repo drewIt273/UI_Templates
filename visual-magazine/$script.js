@@ -48,12 +48,9 @@ function getIndexes() {
 
 function render() {
     const {prev, currentIndex: now, next} = getIndexes();
-    const prevEl = posts.find(p => p.hasAttribute('prev'));
-    const nowEl = posts.find(p => p.hasAttribute('now'));
-    const nextEl = posts.find(p => p.hasAttribute('next'));  
-    updatePost(prevEl, articles[prev]);
-    updatePost(nowEl, articles[now]);
-    updatePost(nextEl, articles[next]);
+    updatePost(postat('prev'), articles[prev]);
+    updatePost(postat('now'), articles[now]);
+    updatePost(postat('next'), articles[next]);
 }
 
 function updatePost(el, data) {
