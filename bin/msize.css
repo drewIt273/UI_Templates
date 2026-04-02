@@ -323,6 +323,12 @@ html{font-size:100%}
 .z-50{z-index:50}
 .z-max{z-index:9999}
 
+/* Opecity utilities */
+.o-0 {opacity: 0;}
+.o\.3 {opacity: .3;}
+.o\.7 {opacity: .7;}
+.o-1 {opacity: 1;}
+
 /* Border utilities */
 .border{border:var(--border-width) solid rgba(0,0,0,.08)}
 .border-0{border-width:0}
