@@ -54,7 +54,7 @@ function render() {
 }
 
 function updatePost(el, data) {
-    const parent = document.querySelector('#con1 va-mag-pic'), desc = parent.querySelector('#mag-description');
+    const parent = document.querySelector('#con-1 va-mag-pic'), desc = parent.querySelector('#mag-description');
     el.querySelector('.mag-description h2').textContent = data.t;
     el.querySelector('.mag-description span').textContent = data.d;
     el.style.backgroundImage = `url("./resources/${data.img}")`;
