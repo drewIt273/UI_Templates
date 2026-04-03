@@ -147,9 +147,30 @@ va-mag-con #mags .mag-con {
     position: absolute;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    transform: translateY(40px);
+    pointer-events: none;
+    display: flex;
+    flex-direction: column !important;
+}
+va-mag-con #mags .mag-con > span:hover {
+    opacity: 1;
+    color: #dbdbdb;
+}
+va-mag-con #mags .mag-con[now] {
+    transition: all .6s ease-in-out;
+    transform: translateY(0px);
+    transition-delay: .2s;
+    opacity: 1;
+    pointer-events: all;
 }
 va-mag-con .mag-con .mag-d {
     line-height: 1.6;
+    display: inline;
+}
+va-mag-con .mag-con #author {
+    letter-spacing: .6px;
+    cursor: pointer;
 }
 div.btab {
     border: 1px solid #ffffff90;
