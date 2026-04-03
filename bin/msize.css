@@ -42,6 +42,7 @@
 .w-lg{width:calc(var(--size-lg)*14)}
 .w-xl{width:calc(var(--size-xl)*16)}
 .w-full{width:100%}
+.w-fit{width: fit-content;}
 
 .h-xxs{height:calc(var(--size-xxs)*6)}
 .h-xs{height:calc(var(--size-xs)*8)}
@@ -50,6 +51,7 @@
 .h-lg{height:calc(var(--size-lg)*14)}
 .h-xl{height:calc(var(--size-xl)*16)}
 .h-auto{height:auto}
+.h-fit{height: fit-content;}
 
 /* Square helpers (width == height) */
 .square-xxs{width:calc(var(--size-xxs)*8);height:calc(var(--size-xxs)*8)}
