@@ -23,21 +23,21 @@ function constat(state) {
 }
 
 /**
- * @param {Element} target 
+ * @param {Element} post
  */
-function transit(target) {
+function transit(post) {
     const current = posts.find(p => p.hasAttribute('now'));
-    if (!target || target === current) return;
+    if (!post || post === current) return;
 
-    if (target === postat('next')) {
-        postat('prev').setStates('next');
-        current.setStates('prev');
-        target.setStates('now');
+    if (post === postat('next')) {
+        postat('prev').setStates('next'); constat('prev').setStates('next');
+        current.setStates('prev'); constat('now').setStates('prev');
+        post.setStates('now'); constat('next').setStates('now');
     }
-    else if (target === postat('prev')) {
-        postat('next').setStates('prev');
-        current.setStates('next');
-        target.setStates('now');
+    else if (post === postat('prev')) {
+        postat('next').setStates('prev'); constat('next').setStates('prev');
+        current.setStates('next'); constat('now').setStates('next');
+        post.setStates('now'); constat('prev').setStates('now');
     }
 }
 
