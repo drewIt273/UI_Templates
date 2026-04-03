@@ -62,7 +62,7 @@ function render() {
 }
 
 function updateContent(el, data) {
-    el.querySelector('.mag-d').textContent = data.i;
+    el.querySelector('.mag-d').textContent = data.i.trim().endsWith('...') ? data.i.trim() : `${data.i.trim()}...`;
     el.querySelector('#author').textContent = data.a.startsWith('@') ? data.a : `@${data.a}`
 }
 
