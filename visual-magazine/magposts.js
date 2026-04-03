@@ -13,7 +13,7 @@ const articles = [{
     d: 'Why do video games became so popular at a point where it is now an important industry?',
     img: 'gaming.jpg',
     i: 'Video games began as simple diversions enjoyed by small groups of enthusiasts. Over time, they evolved into complex worlds that captured the imagination of millions. Today, gaming is not only entertainment but also a cultural force shaping art, technology, and social interaction. Yet the question remains, what truly made them so popular and why they continue to...',
-    a: 'gamebox'
+    a: 'gameboy'
 }, {
     t: 'Futuristic Architecture',
     d: 'Discover how Architects plan our future buildings and cities',
