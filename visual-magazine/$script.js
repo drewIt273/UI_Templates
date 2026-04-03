@@ -12,10 +12,14 @@ Element.prototype.setStates = function (...states) {
     states.forEach(s => this.setAttribute(s, ''));
 }
 
-const posts = Array.from(document.getElementById('mag-posts').children);
+const posts = Array.from(document.querySelectorAll('#mag-posts div.mag-post')), mags = Array.from(document.querySelectorAll('#mags div.mag-con'));
 
 function postat(state) {
     return posts.find(p => p.hasAttribute(state))
+}
+
+function constat(state) {
+    return mags.find(p => p.hasAttribute(state))
 }
 
 /**
