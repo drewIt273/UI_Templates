@@ -55,10 +55,18 @@ function render() {
     updatePost(postat('prev'), articles[prev]);
     updatePost(postat('now'), articles[now]);
     updatePost(postat('next'), articles[next]);
+
+    updateContent(constat('prev'), articles[prev]);
+    updateContent(constat('now'), articles[now]);
+    updateContent(constat('next'), articles[next]);
+}
+
+function updateContent(el, data) {
+    el.querySelector('.mag-d').textContent = data.i;
+    el.querySelector('#author').textContent = data.a.startsWith('@') ? data.a : `@${data.a}`
 }
 
 function updatePost(el, data) {
-    const parent = document.querySelector('#con-1 va-mag-pic'), desc = parent.querySelector('#mag-description');
     el.querySelector('.mag-description h2').textContent = data.t;
     el.querySelector('.mag-description span').textContent = data.d;
     el.style.backgroundImage = `url("./resources/${data.img}")`;
