@@ -77,7 +77,7 @@ const articles = [{
 }, {
     t: 'Human Brain Wonders',
     d: 'Exploring creativity, memory, and consciousness. Your Brain is much more complex than you think.',
-    img: '',
+    img: 'brain-networks.jpg',
     i: 'The human brain is a remarkable organ, capable of imagination, memory, and complex thought. Exploring how creativity emerges from neural connections reveals insights into consciousness itself. Scientists and artists alike are fascinated by the mysteries hidden within our minds. Your brain is much more complex than you think, and understanding creativity, memory, and consciousness is a journey that will',
     a: 'biomike',
 }, {
