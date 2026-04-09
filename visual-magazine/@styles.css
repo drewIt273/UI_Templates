@@ -34,6 +34,8 @@ html body {
     background-color: #191919;
     color: #fff;
     font-family: 'open';
+    background-repeat: repeat;
+    background-position: right;
 }
 html h2 {
     font-size: 1.5em;
@@ -72,6 +74,26 @@ div#con-2 {
     display: block;
     overflow: hidden;
     overflow-y: auto;
+}
+div#catalogue {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+div#main[open], div#catalogue[open] {
+    z-index: 3;
+}
+div#main[close], div#catalogue[close] {
+    display: none;
+    pointer-events: none;
+}
+div#main, div#catalogue {
+    transition: all .4s ease-in-out;
+}
+div#catalogue.containlogues {
+    display: flex;
+    flex-direction: column !important;
+    gap: 15px;
 }
 va-body {
     height: 100%;
