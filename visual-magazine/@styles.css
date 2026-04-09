@@ -73,16 +73,6 @@ div#con-2 {
     overflow: hidden;
     overflow-y: auto;
 }
-va-bg-img {
-    height: 100%;
-    display: block;
-    overflow: hidden;
-    pointer-events: none;
-}
-va-bg-img > img {
-    width: 100%;
-    height: 100%;
-}
 va-body {
     height: 100%;
     padding: 0 20px;
