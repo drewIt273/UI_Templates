@@ -126,6 +126,17 @@ function goPrev() {
     render()
 }();
 
+function switchLayer(t) {
+    if (layers.includes(t)) {
+        let c = layers.find(layer => layer.hasAttribute('open'))
+        c.classList.add('o-0')
+        setTimeout(() => {
+            c.removeAttribute('open'), c.setAttribute('close', '')
+            t.removeAttribute('close'), t.setAttribute('open', '')
+        }, 400)
+    }
+}
+
 document.querySelector('div#main').addEventListener('keydown', /**@param {KeyboardEvent} e */ e => {
     e.key === 'ArrowLeft' ? goPrev() : e.key === 'ArrowRight' ? goNext() : void 0;
 });
