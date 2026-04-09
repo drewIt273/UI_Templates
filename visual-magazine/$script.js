@@ -12,7 +12,7 @@ Element.prototype.setStates = function (...states) {
     states.forEach(s => this.setAttribute(s, ''));
 }
 
-const posts = Array.from(document.querySelectorAll('#mag-posts div.mag-post')), mags = Array.from(document.querySelectorAll('#mags div.mag-con'));
+const posts = Array.from(document.querySelectorAll('#mag-posts div.mag-post')), mags = Array.from(document.querySelectorAll('#mags div.mag-con')), catalogue = document.querySelector('div#catalogue'), main = document.querySelector('div#main'), layers = [main, catalogue];
 
 function postat(state) {
     return posts.find(p => p.hasAttribute(state))
