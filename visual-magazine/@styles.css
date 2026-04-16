@@ -59,15 +59,35 @@ div#background-overlay {
     backdrop-filter: blur(100px);
     z-index: 1;
     width: 100%;
-    height: calc(100dvh - 30px);
+    height: 100dvh;
     position: absolute;
     top: 0;
-    padding: 15px 0;
     background-color: #222222b0;
 }
-div#main {
+.visual-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.visual-layer[open] {
+    opacity: 1;
+    z-index: 3;
+    pointer-events: all;
+}
+.visual-layer[close] {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+#main.visual-layer {
     display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+#main.visual-layer > div {
     gap: 30px;
+    width: 100%;
 }
 div#con-2 {
     width: 100%;
@@ -75,30 +95,10 @@ div#con-2 {
     overflow: hidden;
     overflow-y: auto;
 }
-div#catalogue {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-div#main[open], div#catalogue[open] {
-    z-index: 3;
-}
-div#main[close], div#catalogue[close] {
-    display: none;
-    pointer-events: none;
-}
-div#main, div#catalogue {
-    transition: all .4s ease-in-out;
-}
-div#catalogue.containlogues {
-    display: flex;
-    flex-direction: column !important;
-    gap: 15px;
-}
 va-body {
     height: 100%;
-    padding: 0 20px;
     display: block;
+    position: relative;
 }
 va-mag-pic {
     border-radius: 10px;
@@ -232,10 +232,7 @@ div.liner {
     background-color: #ffffff6e;
 }
 @media (min-width: 500px) {
-    #main {
-        padding: 40px 0;
-    }
-    va-body {
+    #main.visual-layer > div {
         padding: 0 40px;
     }
 }
