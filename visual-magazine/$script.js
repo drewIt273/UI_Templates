@@ -12,7 +12,7 @@ Element.prototype.setStates = function (...states) {
     states.forEach(s => this.setAttribute(s, ''));
 }
 
-const posts = Array.from(document.querySelectorAll('#mag-posts div.mag-post')), mags = Array.from(document.querySelectorAll('#mags div.mag-con')), catalogue = document.querySelector('div#catalogue'), main = document.querySelector('div#main'), layers = [main, catalogue];
+const posts = Array.from(document.querySelectorAll('#mag-posts div.mag-post')), mags = Array.from(document.querySelectorAll('#mags div.mag-con')), catalogue = document.querySelector('#catalogues-container.visual-layer'), main = document.querySelector('#main.visual-layer'), layers = [main, catalogue];
 
 function postat(state) {
     return posts.find(p => p.hasAttribute(state))
@@ -131,7 +131,6 @@ function goPrev() {
 function switchLayer(t) {
     if (layers.includes(t)) {
         let c = layers.find(layer => layer.hasAttribute('open'))
-        c.classList.add('o-0')
         setTimeout(() => {
             c.removeAttribute('open'), c.setAttribute('close', '')
             t.removeAttribute('close'), t.setAttribute('open', '')
