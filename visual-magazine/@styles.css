@@ -123,6 +123,22 @@ div#background-overlay {
 .visual-layer #catalogues-handle section.main-block {
     margin-top: 6em;
 }
+.visual-layer .catalogue {
+    border: 2px solid #f8f8f80d;
+    background-color: #f8f8f80d;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    clip-path: var(--clip-path-squircle-stroke-focused-60);
+}
+.visual-layer .catalogue:hover {
+    transform: scale(1.1);
+}
+.visual-layer .catalogue .card {
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
 div#con-2 {
     width: 100%;
     display: block;
