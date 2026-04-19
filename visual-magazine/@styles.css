@@ -307,17 +307,9 @@ div.liner {
     #main.visual-layer > div {
         padding: 0 40px !important;
     }
-    .visual-layer .card {
-        max-width: 500px !important;
-        width: 40% !important;
-    }
     .visual-layer .catalogue {
-        min-width: 500px !important;
-    }
-}
-@media (min-width: 0px) {
-    .visual-layer .card {
-        max-width: 100%;
         width: 100%;
+        max-width: 52em;
+        min-height: 290px;
     }
 }
