@@ -120,24 +120,46 @@ div#background-overlay {
     width: 100%;
     max-width: 56em;
 }
-.visual-layer #catalogues-handle section.main-block {
+.visual-layer #catalogues-handle section#catalogues-block {
     margin-top: 6em;
+    width: 100%;
+    padding-block: 15px;
+    padding-inline: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
 .visual-layer .catalogue {
+    position: relative;
+    display: flex;
+    align-items: center;
     border: 2px solid #f8f8f80d;
     background-color: #f8f8f80d;
     transition: all .3s ease-in-out;
     cursor: pointer;
-    clip-path: var(--clip-path-squircle-stroke-focused-60);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    padding: 13px 0;
+    padding-inline: 3em;
 }
-.visual-layer .catalogue:hover {
-    transform: scale(1.1);
+.visual-layer .catalogue span#title {
+    font-size: 1.4em;
+    padding-bottom: 10px;
 }
-.visual-layer .catalogue .card {
-    border-top-left-radius: 3rem;
-    border-bottom-left-radius: 3rem;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+.visual-layer .catalogue span#desc {
+    max-width: 410px;
+    padding-bottom: 10px;
+}
+.visual-layer .catalogue .btab {
+    left: 0px;
+    top: 20px;
+    position: relative;
 }
 div#con-2 {
     width: 100%;
