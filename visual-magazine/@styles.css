@@ -270,7 +270,7 @@ va-mag-con .mag-con #author {
     width: 1.5rem;
     height: 1.5rem;
 }
-div.btab {
+.btab {
     border: 1px solid #ffffff90;
     padding: 5px 18px !important;
     border-radius: 20px;
@@ -282,7 +282,7 @@ div.btab {
     cursor: pointer;
     transition: all .3s ease-in;
 }
-div.btab:hover {
+.btab:hover {
     background-color: #ffffff;
     color: #191919;
 }
