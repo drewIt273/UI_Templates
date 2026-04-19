@@ -28,3 +28,66 @@ const catalogues = [{
     img: '',
     tgs: ['Creativity', 'Lifestyle', 'Culture']
 }]
+
+function activateCatalogues() {
+    const container = document.getElementById('catalogues-block'), items = Array.from(container.children);
+    let index = 0
+    let autoScrollInterval;
+
+    function scrollToIndex(i) {
+        index = (i + items.length) % items.length;
+      
+        container.scrollTo({
+          left: items[index].offsetLeft,
+          behavior: 'smooth'
+        });
+    }
+
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            scrollToIndex(index + 1)
+        }, 4000)
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval)
+    }
+
+    let startX = 0
+    let isDraging = false
+
+    container.addEventListener('pointerdown', e => {
+        stopAutoScroll();
+        startX = e.clientX
+        isDraging = true
+    })
+
+    container.addEventListener('pointerup', e => {
+        if (!isDraging) return;
+        const diff = e.clientX - startX
+        if (diff > 50) scrollToIndex(index - 1)
+        else if (diff < -50) scrollToIndex(index + 1)
+    })
+
+    isDraging = false
+    startAutoScroll()
+
+    container.addEventListener('scroll', () => {
+        const scrollLeft = container.scrollLeft;
+        let closest = 0;
+        let minDiff = Infinity;
+
+        items.forEach((item, i) => {
+            const diff = Math.abs(item.offsetLeft - scrollLeft);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closest = i;
+            }
+        });
+
+        index = closest;
+    });
+
+    container.addEventListener('mouseenter', stopAutoScroll)
+    container.addEventListener('mouseleave', startAutoScroll)
+}
