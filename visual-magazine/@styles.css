@@ -118,7 +118,7 @@ div#background-overlay {
     padding-top: 6em;
     padding-inline: 9px;
     width: 100%;
-    max-width: 56em;
+    max-width: 65em;
 }
 .visual-layer #catalogues-handle section#catalogues-block {
     margin-top: 6em;
@@ -147,6 +147,7 @@ div#background-overlay {
     flex-shrink: 0;
     padding: 13px 0;
     padding-inline: 3em;
+    scroll-snap-align: center;
 }
 .visual-layer .catalogue span#title {
     font-size: 1.4em;
@@ -308,8 +309,8 @@ div.liner {
         padding: 0 40px !important;
     }
     .visual-layer .catalogue {
-        width: 100%;
-        max-width: 52em;
+        width: 45em;
         min-height: 290px;
+        padding-inline: calc(50% - 26em);
     }
 }
