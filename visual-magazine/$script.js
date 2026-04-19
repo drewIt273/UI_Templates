@@ -128,6 +128,15 @@ function goPrev() {
     render()
 }();
 
+!function() {
+    catalogues.forEach(o => {
+        const c = document.createElement('div'), n = document.createElement('div'), t = document.createElement('span'), d = document.createElement('span'), b = document.createElement('span');
+        n.className = 'd-flex flex-column gap-xs', t.id = 'title', d.id = 'desc', b.className = 'btab', c.className = 'catalogue', c.appendChild(n), n.append(t, d, b)
+        t.textContent = o.t, d.textContent = o.d, b.textContent = 'View Articles'
+        catalogue.querySelector('#catalogues-block').appendChild(c)
+    })
+}();
+
 function switchLayer(t) {
     if (layers.includes(t)) {
         let c = layers.find(layer => layer.hasAttribute('open'))
