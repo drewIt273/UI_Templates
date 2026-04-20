@@ -139,6 +139,7 @@ let recentLayer;
         catalogue.querySelector('#catalogues-block').appendChild(c)
     })
     catalogue.querySelector('#back-tab').addEventListener('click', () => switchLayer(recentLayer))
+    activateCatalogues()
 }();
 
 function switchLayer(t) {
