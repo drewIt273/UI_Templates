@@ -129,6 +129,8 @@ function goPrev() {
     render()
 }();
 
+let recentLayer;
+
 !function() {
     catalogues.forEach(o => {
         const c = document.createElement('div'), n = document.createElement('div'), t = document.createElement('span'), d = document.createElement('span'), b = document.createElement('span');
@@ -136,13 +138,15 @@ function goPrev() {
         t.textContent = o.t, d.textContent = o.d, b.textContent = 'View Articles'
         catalogue.querySelector('#catalogues-block').appendChild(c)
     })
+    catalogue.querySelector('#back-tab').addEventListener('click', () => switchLayer(recentLayer))
 }();
 
 function switchLayer(t) {
     if (layers.includes(t)) {
         let c = layers.find(layer => layer.hasAttribute('open'))
+        recentLayer = c;
+        c.removeAttribute('open'), c.setAttribute('close', '')
         setTimeout(() => {
-            c.removeAttribute('open'), c.setAttribute('close', '')
             t.removeAttribute('close'), t.setAttribute('open', '')
         }, 400)
     }
