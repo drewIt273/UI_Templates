@@ -18,7 +18,7 @@ const magposts = [{
     i: 'Video games began as simple diversions enjoyed by small groups of enthusiasts. Over time, they evolved into complex worlds that captured the imagination of millions. Today, gaming is not only entertainment but also a cultural force shaping art, technology, and social interaction. Yet the question remains, what truly made them so popular and why they continue to...',
     a: 'gameboy',
     m: [502, 610, 113],
-    c: '',
+    c: '011',
     stamp: '',
 }, {
     t: 'Futuristic Architecture',
@@ -27,7 +27,7 @@ const magposts = [{
     i: 'Architecture is more than just designing buildings; it is about shaping the way we live and interact with our environment. From towering skyscrapers to sustainable homes, architects envision spaces that reflect culture and innovation. Their work determines how cities grow and how communities thrive. But the question remains, how do architects plan our future buildings and cities in ways that will...',
     a: 'vylkirie',
     m: [502, 610, 113],
-    c: '',
+    c: '010',
     stamp: '',
 }, {
     t: 'Becoming a Web Developer',
@@ -81,7 +81,7 @@ const magposts = [{
     i: 'Anime has become a global phenomenon, captivating audiences across cultures and generations. Its unique blend of storytelling, art, and emotion makes it stand out from other forms of entertainment. Fans often find themselves drawn to the creativity and depth of the worlds it portrays. Discover why most people like watching animes and why they are worth watching, as the reasons continue to',
     a: 'ninenime',
     m: [502, 610, 113],
-    c: '',
+    c: '011',
     stamp: '',
 }, {
     t: 'Virtual Reality Worlds',
@@ -90,7 +90,7 @@ const magposts = [{
     i: 'Virtual reality is transforming the way people play games and interact socially. By immersing users in digital worlds, VR creates experiences that feel more real than ever before. It is quickly becoming a platform for both entertainment and communication. Why VR is becoming the next frontier for gaming and social interaction is a story that is only beginning to unfold as technology',
     a: 'techash',
     m: [502, 610, 113],
-    c: '',
+    c: '010',
     stamp: '',
 }, {
     t: 'Music Evolution',
@@ -99,7 +99,7 @@ const magposts = [{
     i: 'Music has always shaped the way societies express themselves, from classical symphonies to modern digital beats. Soundscapes influence moods, inspire movements, and reflect cultural change. As technology evolves, the role of sound in everyday life becomes even more powerful. From classical to digital beats, how soundscapes change society is a journey that continues to reveal new possibilities as they',
     a: 'fanart',
     m: [502, 610, 113],
-    c: '',
+    c: '011',
     stamp: '',
 }, {
     t: 'Digital Art Evolution',
@@ -108,7 +108,7 @@ const magposts = [{
     i: 'Tools like Procreate and Blender have transformed the way new artists approach creativity. They provide accessible platforms for sketching, modeling, and experimenting with ideas that once required expensive equipment. With these digital tools, anyone can explore artistic expression and share their work globally. How tools like Procreate and Blender empower new artists is a story that continues to unfold as they',
     a: 'fanart',
     m: [502, 610, 113],
-    c: '',
+    c: '011',
     stamp: '',
 }, {
     t: 'Human Brain Wonders',
@@ -126,7 +126,7 @@ const magposts = [{
     i: 'Connected devices are reshaping the way we interact with technology. Smartphones, computers, and smart appliances now work together to create a seamless digital environment. This integration allows tasks to move effortlessly from one device to another, making life more convenient and connected. Discover how everyday devices communicate seamlessly, from turning on your TV with your phone to editing documents across platforms, and how this technology continues to',
     a: 'techash',
     m: [502, 610, 113],
-    c: '',
+    c: '010',
     stamp: '',
 }, {
     t: 'City Dreams',
@@ -153,7 +153,7 @@ const magposts = [{
     i: 'Fashion has always been a powerful way for people to express identity and individuality. In modern youth culture, clothing choices reflect creativity, confidence, and belonging. Styles evolve rapidly, influenced by music, art, and social movements. Why fashion is a powerful form of self-expression in modern youth culture is a question that reveals deeper truths as they',
     a: 'fanart',
     m: [502, 610, 113],
-    c: '',
+    c: '011',
     stamp: '',
 }, ]
 
@@ -250,3 +250,5 @@ const articles = [{
 }];
 
 articles.push(...magposts);
+
+const tags = [['Technology', '#007373', '#02ffff'], ['Entertainment', '#cd8601', '#ff8600'], ['World', '#6495ed', '#7aaaff'], ['Lifestyle', '#ffc0cb'], ['Business', '#9d9d9d', '#dcdcdc'], ['Science', '#90902c', '#d7d747'], ['Culture', '#3b5998', '#7aa5ff'], ['Creativity', '#a192ff', '#c4bbff']];
