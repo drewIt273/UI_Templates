@@ -174,10 +174,37 @@ div#background-overlay {
     padding: 6px;
 }
 #articles-view.visual-layer #mg-img {
-    height: 10em;
+    height: 20em;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #f8f8f80d;
+}
+#articles-view.visual-layer #mg-img > .pos-absolute {
+    padding-inline: 4em;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: stretch;
+}
+#articles-view.visual-layer #articles-block {
+    display: flex;
+    flex-direction: column !important;
+    gap: 1em;
+    padding-top: 2em;
+}
+.tags-container {
+    display: flex;
+    gap: 12px;
+    padding-inline: 10px;
+    margin-top: 1em;
+}
+span.tg {
+    padding: 5px 14px;
+    width: fit-content;
+    border-radius: 20px;
+    border: 1px solid;
+    font-size: 14px;
+    cursor: pointer;
 }
 div#con-2 {
     width: 100%;
