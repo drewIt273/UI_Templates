@@ -173,6 +173,12 @@ div#background-overlay {
 #catalogues-container.visual-layer .htab {
     padding: 6px;
 }
+#articles-view.visual-layer #mg-img {
+    height: 10em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #f8f8f80d;
+}
 div#con-2 {
     width: 100%;
     display: block;
