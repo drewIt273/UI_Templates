@@ -2,7 +2,7 @@
  * Instance by DrewIt
  */
 
-const articles = [{
+const magposts = [{
     t: 'Sunset Tree in Nature',
     d: 'Discover the fascinating secrets of plants that benfits the whole earth.',
     img: 'Sunset Light Tree in Nature.jpg',

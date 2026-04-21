@@ -44,21 +44,21 @@ function transit(post) {
 let currentIndex = 0;
 
 function getIndexes() {
-    const prev = (currentIndex - 1 + articles.length) % articles.length;
-    const next = (currentIndex + 1) % articles.length;
+    const prev = (currentIndex - 1 + magposts.length) % magposts.length;
+    const next = (currentIndex + 1) % magposts.length;
 
     return {prev, currentIndex, next};
 }
 
 function render() {
     const {prev, currentIndex: now, next} = getIndexes();
-    updatePost(postat('prev'), articles[prev]);
-    updatePost(postat('now'), articles[now]);
-    updatePost(postat('next'), articles[next]);
+    updatePost(postat('prev'), magposts[prev]);
+    updatePost(postat('now'), magposts[now]);
+    updatePost(postat('next'), magposts[next]);
 
-    updateContent(constat('prev'), articles[prev]);
-    updateContent(constat('now'), articles[now]);
-    updateContent(constat('next'), articles[next]);
+    updateContent(constat('prev'), magposts[prev]);
+    updateContent(constat('now'), magposts[now]);
+    updateContent(constat('next'), magposts[next]);
 }
 
 function updateContent(el, data) {
@@ -77,13 +77,13 @@ function updatePost(el, data) {
 }
 
 function goNext() {
-    currentIndex = (currentIndex + 1) % articles.length;
+    currentIndex = (currentIndex + 1) % magposts.length;
     transit(postat('next'));
     render();
 }
 
 function goPrev() {
-    currentIndex = (currentIndex - 1 + articles.length) % articles.length;
+    currentIndex = (currentIndex - 1 + magposts.length) % magposts.length;
     transit(postat('prev'));
     render();
 }
@@ -125,7 +125,7 @@ function goPrev() {
         h[0].addEventListener('click', () => switchLayer(catalogue))
     })
 
-    currentIndex = Math.floor(Math.random() * articles.length)
+    currentIndex = Math.floor(Math.random() * magposts.length)
     render()
 }();
 
@@ -135,7 +135,7 @@ let recentLayer;
     catalogues.forEach(o => {
         const c = document.createElement('div'), n = document.createElement('div'), t = document.createElement('span'), d = document.createElement('span'), b = document.createElement('span');
         n.className = 'd-flex flex-column gap-xs', t.id = 'title', d.id = 'desc', b.className = 'btab', c.className = 'catalogue', c.appendChild(n), n.append(t, d, b)
-        t.textContent = o.t, d.textContent = o.d, b.textContent = 'View Articles'
+        t.textContent = o.t, d.textContent = o.d, b.textContent = 'View magposts'
         catalogue.querySelector('#catalogues-block').appendChild(c)
     })
     catalogue.querySelector('#back-tab').addEventListener('click', () => switchLayer(recentLayer))
