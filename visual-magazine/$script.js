@@ -134,7 +134,7 @@ let recentLayer;
 !function() {
     catalogues.forEach(o => {
         const c = document.createElement('div'), n = document.createElement('div'), t = document.createElement('span'), d = document.createElement('span'), b = document.createElement('span');
-        n.className = 'd-flex flex-column gap-xs', t.id = 'title', d.id = 'desc', b.className = 'btab', c.className = 'catalogue', c.appendChild(n), n.append(t, d, b)
+        n.className = 'd-flex flex-column gap-xs', t.id = 'title', d.id = 'desc', b.className = 'btab', c.dataset.catalogueId = o.i, c.className = 'catalogue', c.appendChild(n), n.append(t, d, b)
         t.textContent = o.t, d.textContent = o.d, b.textContent = 'View magposts'
         catalogue.querySelector('#catalogues-block').appendChild(c)
     })
