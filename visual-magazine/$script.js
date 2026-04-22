@@ -143,11 +143,11 @@ let recentLayer = main;
     catalogues.forEach(o => {
         const c = document.createElement('div'), n = document.createElement('div'), t = document.createElement('span'), d = document.createElement('span'), b = document.createElement('span');
         n.className = 'd-flex flex-column gap-xs', t.id = 'title', d.id = 'desc', b.className = 'btab', c.dataset.catalogueId = o.i, c.className = 'catalogue', c.appendChild(n), n.append(t, d, b)
-        t.textContent = o.t, d.textContent = o.d, b.textContent = 'View magposts'
+        t.textContent = o.t, d.textContent = o.d, b.textContent = 'View articles'
         catalogue.querySelector('#catalogues-block').appendChild(c)
         c.addEventListener('click', () => openLogue(c.getAttribute('data-catalogue-id')))
     })
-    catalogue.querySelector('#back-tab').addEventListener('click', () => switchLayer(recentLayer))
+    document.querySelectorAll('#back-tab').forEach(n => n.addEventListener('click', () => switchLayer(recentLayer)))
     activateCatalogues()
 }();
 
