@@ -247,4 +247,4 @@ const articles = [{
     stamp: ''
 }];
 
-const tags = [['Technology', '#007373', '#02ffff'], ['Entertainment', '#cd8601', '#ff8600'], ['World', '#6495ed', '#7aaaff'], ['Lifestyle', '#ffc0cb'], ['Business', '#9d9d9d', '#dcdcdc'], ['Science', '#90902c', '#d7d747'], ['Culture', '#3b5998', '#7aa5ff'], ['Creativity', '#a192ff', '#c4bbff']];
+const tags = [['Technology', '#007373', '#02ffff'], ['Entertainment', '#cd8601', '#ff8600'], ['World', '#6495ed', '#7aaaff'], ['Lifestyle', '#ffc0cb', '#ffc0cb'], ['Business', '#9d9d9d', '#dcdcdc'], ['Science', '#90902c', '#d7d747'], ['Culture', '#3b5998', '#7aa5ff'], ['Creativity', '#a192ff', '#c4bbff']];
