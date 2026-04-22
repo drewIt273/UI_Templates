@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="catalogues-container" class="visual-layer" close>
+                    <div id="catalogues-container" class="visual-layer" open>
                         <div id="catalogues-handle">
                             <div>
                                 <div id="main-con">
@@ -53,16 +53,22 @@
                             </div>
                         </div>
                     </div>
-                    <div id="articles-view" class="visual-layer" open>
+                    <div id="articles-view" class="visual-layer" close>
                         <div class="h-full px-xs">
                             <div class="d-flex justify-center h-full overflow-hidden y-auto">
                                 <div class="max-w-content">
                                     <div id="mg-img" class="pos-relative w-full">
-                                        <div class="pos-absolute"></div>
+                                        <div class="pos-absolute">
+                                            <div class="d-flex flex-column gap-xl h-full justify-center">
+                                                <span id="header" style="font-size: 2.2em;"></span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="pt-lg d-flex justify-between">
                                         <div class="tags-container"></div>
-                                        <div></div>
+                                        <div>
+                                            <span id="back-tab" class="htab center"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg> </span>
+                                        </div>
                                     </div>
                                     <div id="articles-block"></div>
                                 </div>
