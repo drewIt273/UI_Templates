@@ -192,6 +192,49 @@ div#background-overlay {
     gap: 1em;
     padding-top: 2em;
 }
+#articles-view.visual-layer #articles-block .article {
+    padding: 20px 15px;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    gap: 15px;
+    width: stretch;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    background-color: #ffffff0f;
+}
+#articles-view.visual-layer #articles-block .article:hover {
+    transform: scale(1.02);
+}
+#articles-view.visual-layer #articles-block .article h4 {
+    font-size: 1.2em;
+}
+#articles-view.visual-layer #articles-block .article .m {
+    opacity: .6;
+    font-size: 15px;
+    cursor: pointer;
+}
+#articles-view.visual-layer #articles-block .article .m:hover {
+    opacity: 1;
+}
+#articles-view.visual-layer #articles-block .article .d {
+    background-color: #ffffff10;
+    border-radius: 10px;
+    width: 130px;
+}
+#articles-view.visual-layer #articles-block .article .a {
+    width: 55px; height: 55px;
+    border-radius: 55px;
+    overflow: hidden;
+    background-color: #ffffff10;
+}
+#articles-view.visual-layer #articles-block .article:after {
+    position: absolute;
+    content: attr(count);
+    font-size: 3em;
+    left: -35px;
+    align-self: center;
+}
 .tags-container {
     display: flex;
     gap: 12px;
