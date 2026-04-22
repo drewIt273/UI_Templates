@@ -170,7 +170,7 @@ div#background-overlay {
     opacity: 1;
     color: currentColor;
 }
-#catalogues-container.visual-layer .htab {
+.visual-layer #back-tab, #catalogues-container.visual-layer .htab {
     padding: 6px;
 }
 #articles-view.visual-layer #mg-img {
@@ -190,7 +190,7 @@ div#background-overlay {
     display: flex;
     flex-direction: column !important;
     gap: 1em;
-    padding-top: 2em;
+    padding-block: 2em;
 }
 #articles-view.visual-layer #articles-block .article {
     padding: 20px 15px;
@@ -234,6 +234,7 @@ div#background-overlay {
     font-size: 3em;
     left: -35px;
     align-self: center;
+    opacity: .6;
 }
 .tags-container {
     display: flex;
@@ -245,9 +246,10 @@ span.tg {
     padding: 5px 14px;
     width: fit-content;
     border-radius: 20px;
-    border: 1px solid;
+    border: 2px solid;
     font-size: 14px;
     cursor: pointer;
+    font-weight: 400;
 }
 div#con-2 {
     width: 100%;
@@ -384,6 +386,19 @@ va-mag-con .mag-con #author {
 .htab:hover {
     background-color: #ffffff14;
     opacity: 1;
+}
+.rtab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.rtab:hover {
+    background-color: #ffffff14;
+}
+.rtab#like[active] {
+    color: #ff5c78;
 }
 div.liner {
     width: 100%;
