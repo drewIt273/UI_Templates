@@ -145,6 +145,7 @@ let recentLayer;
         n.className = 'd-flex flex-column gap-xs', t.id = 'title', d.id = 'desc', b.className = 'btab', c.dataset.catalogueId = o.i, c.className = 'catalogue', c.appendChild(n), n.append(t, d, b)
         t.textContent = o.t, d.textContent = o.d, b.textContent = 'View magposts'
         catalogue.querySelector('#catalogues-block').appendChild(c)
+        c.addEventListener('click', () => openLogue(c.getAttribute('data-catalogue-id')))
     })
     catalogue.querySelector('#back-tab').addEventListener('click', () => switchLayer(recentLayer))
     activateCatalogues()
@@ -164,3 +165,36 @@ function switchLayer(t) {
 main.addEventListener('keydown', /**@param {KeyboardEvent} e */ e => {
     e.key === 'ArrowLeft' ? goPrev() : e.key === 'ArrowRight' ? goNext() : void 0;
 });
+
+/**
+ * @param {string} id 
+ */
+function openLogue(id) {
+    const a = [], view = articles_view.querySelector('#articles-block');
+    articles.forEach(o => {
+        if (o.c === id) a.push(o);
+    })
+    view.innerHTML = ''
+    for (let i = 0; i < a.length; i++) {
+        const n = a[i], article = document.createElement('div'); article.className = 'article'; article.setAttribute('count', `0${i+1}`)
+        article.innerHTML = `
+            <div class="d"></div>
+            <div class="d-flex flex-column gap-sm">
+                <h4>${n.d.length > 80 ? n.d.slice(0, 80).concat('...') : n.d}</h4>
+                <div class="d-flex gap-xs">
+                    <span class="m">${n.m[1]} views</span>
+                    <span class="m">${n.m[2]} comments</span>
+                </div>
+                <div class="d-flex gap-xs items-center">
+                    <div class="a"></div>
+                    <div class="d-flex flex-column gap-xxs o.7 size-sm">
+                        <span id="a-name">${n.a}</span>
+                        <span id="stamp-date">2 days ago</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        view.appendChild(article)
+    }
+    switchLayer(articles_view)
+}
