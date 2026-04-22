@@ -12,7 +12,15 @@ Element.prototype.setStates = function (...states) {
     states.forEach(s => this.setAttribute(s, ''));
 }
 
-const posts = Array.from(document.querySelectorAll('#mag-posts div.mag-post')), mags = Array.from(document.querySelectorAll('#mags div.mag-con')), catalogue = document.querySelector('#catalogues-container.visual-layer'), main = document.querySelector('#main.visual-layer'), layers = [main, catalogue];
+const magposts = [];
+
+const posts = Array.from(document.querySelectorAll('#mag-posts div.mag-post')), mags = Array.from(document.querySelectorAll('#mags div.mag-con')), catalogue = document.querySelector('#catalogues-container.visual-layer'), main = document.querySelector('#main.visual-layer'), articles_view = document.querySelector('#articles-view.visual-layer'), layers = [main, catalogue, articles_view];
+
+!function() {
+    articles.forEach(a => {
+        if (a.img !== '') magposts.push(a)
+    })
+}();
 
 function postat(state) {
     return posts.find(p => p.hasAttribute(state))
@@ -153,6 +161,6 @@ function switchLayer(t) {
     }
 }
 
-document.querySelector('div#main').addEventListener('keydown', /**@param {KeyboardEvent} e */ e => {
+main.addEventListener('keydown', /**@param {KeyboardEvent} e */ e => {
     e.key === 'ArrowLeft' ? goPrev() : e.key === 'ArrowRight' ? goNext() : void 0;
 });
