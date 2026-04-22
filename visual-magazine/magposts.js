@@ -2,7 +2,7 @@
  * Instance by DrewIt
  */
 
-const magposts = [{
+const articles = [{
     t: 'Sunset Tree in Nature',
     d: 'Discover the fascinating secrets of plants that benfits the whole earth.',
     img: 'Sunset Light Tree in Nature.jpg',
@@ -155,9 +155,7 @@ const magposts = [{
     m: [502, 610, 113],
     c: '011',
     stamp: '',
-}, ]
-
-const articles = [{
+}, {
     t: '',
     d: '',
     img: '',
@@ -248,7 +246,5 @@ const articles = [{
     c: '',
     stamp: ''
 }];
-
-articles.push(...magposts);
 
 const tags = [['Technology', '#007373', '#02ffff'], ['Entertainment', '#cd8601', '#ff8600'], ['World', '#6495ed', '#7aaaff'], ['Lifestyle', '#ffc0cb'], ['Business', '#9d9d9d', '#dcdcdc'], ['Science', '#90902c', '#d7d747'], ['Culture', '#3b5998', '#7aa5ff'], ['Creativity', '#a192ff', '#c4bbff']];
