@@ -137,7 +137,7 @@ function goPrev() {
     render()
 }();
 
-let recentLayer;
+let recentLayer = main;
 
 !function() {
     catalogues.forEach(o => {
