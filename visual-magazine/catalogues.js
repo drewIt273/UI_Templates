@@ -7,31 +7,37 @@ const catalogues = [{
     d: 'Exploring the ideas, technologies, and breakthroughs shaping what comes next.',
     img: '',
     tgs: ['Technology', 'Science', 'Business'],
-    i: '010',
+    i: 'C01',
 }, {
     t: 'The World in Transition',
     d: 'A look at the shifts redefining how we live, work, and connect.',
     img: '',
     tgs: ['World', 'Business', 'Lifestyle'],
-    i: '011',
+    i: 'C02',
 }, {
     t: 'Beyind the Screen',
     d: 'Stories, worlds, and creativity that live through screens and beyond.',
     img: '',
     tgs: ['Entertainment', 'Culture', 'Creativity'],
-    i: '012',
+    i: 'C03',
 }, {
     t: 'New & Noteworthy',
     d: 'Fresh perspectives, emerging trends, and stories worth your attention.',
     img: '',
     tgs: ['Technology', 'Entertainment', 'Culture'],
-    i: '013',
+    i: 'C04',
+}, {
+    t: 'Science & Tech',
+    d: 'Exploring the ideas, techonologies and breakthroughs that shapes our world.',
+    img: '',
+    tgs: ['Technology', 'Science'],
+    i: 'C05'
 }, {
     t: 'Aesthetic Realms',
     d: 'A collection of visuals and designs that capture beauty and imagination.',
     img: '',
     tgs: ['Creativity', 'Lifestyle', 'Culture'],
-    i: '014',
+    i: 'C06',
 }]
 
 function activateCatalogues() {
