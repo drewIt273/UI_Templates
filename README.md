@@ -18,7 +18,7 @@ I have designed an interactive visual magazine which allows users to read articl
 ## Running the Templates
 To see how the templates look like, simply
 - Clone the repository
-- In the templates folder, open `@index.html` in your browser
+- In the template folder, open `@index.html` in your browser
 
 Once the template is open, click on any icon or button you see. Some open hidden content.
 
