@@ -21,3 +21,5 @@ To see how the templates look like, simply
 - In the templates folder, open `@index.html` in your browser
 
 Once the template is open, click on any icon or button you see. Some open hidden content.
+
+> NB: The bin folder just contain files needed by other templates like stylesheets to avoid repeating code.
